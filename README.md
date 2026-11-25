@@ -12,7 +12,7 @@ The funniest one-line out-of-office reply: "I am away until Monday. I have muted
 node main.ts
 ```
 
-`main.ts` writes the one-line reply to `$MAKEFUN_OUTPUT_DIR/entry.txt` (or `/output/entry.txt` by default), verifying first that it is a single line of 1–140 characters with no dash and no word repeated four or more times.
+`main.ts` writes the one-line reply to `$MAKEFUN_OUTPUT_DIR/entry.txt` (or `/output/entry.txt` by default), verifying first that it is a single line of 1–160 characters with no dash and no word repeated four or more times.
 
 ---
 

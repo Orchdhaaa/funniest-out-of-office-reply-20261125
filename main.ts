@@ -9,14 +9,14 @@ import { writeFileSync, mkdirSync } from "node:fs";
 const LINE =
   "I am away until Monday. I have muted my inbox, my phone, and, for good measure, my sense of responsibility.";
 
-// The entry gate accepts UTF-8 text of 1 to 140 characters that is not
+// The entry gate accepts UTF-8 text of 1 to 160 characters that is not
 // whitespace-only, so verify the line meets the gate before writing it.
-// 140 is the tightest cap observed across the sibling out-of-office
-// bounties (140, 159, 160, 280); this line is 107 characters, inside
-// every one of them.
+// 160 is the cap the kit's competition.yaml seals for this bounty
+// ("A sealed scorer checks that /output/entry.txt is UTF-8 text of 1
+// to 160 characters"); this line is 107 characters, inside it.
 const chars = [...LINE].length;
-if (chars < 1 || chars > 140 || LINE.trim().length === 0) {
-  throw new Error(`line is ${chars} characters, outside the 1-140 gate`);
+if (chars < 1 || chars > 160 || LINE.trim().length === 0) {
+  throw new Error(`line is ${chars} characters, outside the 1-160 gate`);
 }
 
 // The brief demands exactly one line: a line break would split the
